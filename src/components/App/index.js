@@ -11,17 +11,38 @@ import ApartmentList from 'src/containers/ApartmentList';
 import SingleApartment from 'src/containers/SingleApartment';
 import NewApartmentForm from 'src/containers/NewApartmentForm';
 import NewRoomForm from 'src/containers/NewRoomForm';
+import CustomerList from 'src/components/CustomerList';
+import SingleCustomer from 'src/components/SingleCustomer';
 
-const App = ({ getAllApartments, apartments, loading }) => {
+const App = ({
+  getAllApartments,
+  getAllCustomers,
+  apartments,
+  customers,
+  loading,
+}) => {
   useEffect(() => {
     getAllApartments();
+    getAllCustomers();
   }, []);
 
   return (
     <div className="app">
       <Route exact path="/">
         <Page>
-          <ApartmentList />
+          <ApartmentList apartment={apartments} />
+        </Page>
+      </Route>
+
+      <Route exact path="/customers">
+        <Page>
+          <CustomerList customers={customers} />
+        </Page>
+      </Route>
+
+      <Route exact path="/customers/:slug">
+        <Page>
+          <SingleCustomer customers={customers} />
         </Page>
       </Route>
 
@@ -59,7 +80,9 @@ const App = ({ getAllApartments, apartments, loading }) => {
 
 App.propTypes = {
   getAllApartments: PropTypes.func.isRequired,
+  getAllCustomers: PropTypes.func.isRequired,
   apartments: PropTypes.array.isRequired,
+  customers: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
 };
 

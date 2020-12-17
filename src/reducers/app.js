@@ -1,7 +1,11 @@
-import { SAVE_ALL_APARTMENTS } from 'src/actions/apartmentList';
+import {
+  SAVE_ALL_APARTMENTS,
+  SAVE_ALL_CUSTOMERS,
+} from 'src/actions/app';
 
 export const initialState = {
   apartments: [],
+  customers: [],
   loading: true,
 };
 
@@ -11,6 +15,12 @@ const app = (state = initialState, action = {}) => {
       return {
         ...state,
         apartments: action.apartments,
+        loading: false,
+      };
+    case SAVE_ALL_CUSTOMERS:
+      return {
+        ...state,
+        customers: action.customers,
         loading: false,
       };
     default:

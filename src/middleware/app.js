@@ -2,10 +2,12 @@ import axios from 'axios';
 import
 {
   GET_ALL_APARTMENTS,
+  GET_ALL_CUSTOMERS,
   saveAllApartments,
+  saveAllCustomers,
 } from 'src/actions/app';
 
-const apartmentList = (store) => (next) => (action) => {
+const app = (store) => (next) => (action) => {
   switch (action.type) {
     // Stocker tous les appartements dans le store
     case GET_ALL_APARTMENTS: {
@@ -18,9 +20,21 @@ const apartmentList = (store) => (next) => (action) => {
         });
       break;
     }
+    // Stocker tous les clients dans le store
+    case GET_ALL_CUSTOMERS: {
+      axios.get('https://app-booking-christ.herokuapp.com/api/client')
+        .then((res) => {
+          console.log(res);
+          store.dispatch(saveAllCustomers(res.data.clients));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      break;
+    }
     default:
       next(action);
   }
 };
 
-export default apartmentList;
+export default app;
