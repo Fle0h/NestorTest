@@ -1,0 +1,16 @@
+@use 'src/styles/vars' as v;
+
+.singleApartment {
+  &_rooms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  &_room {
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 2em;
+    margin-top: 2em;
+  }
+}

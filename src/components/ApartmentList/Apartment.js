@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { slugify } from 'slugify';
+import slugify from 'react-slugify';
 
 import './style.scss';
 
