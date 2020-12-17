@@ -8,8 +8,9 @@ import './styles.scss';
 
 import Page from 'src/components/Page';
 import ApartmentList from 'src/containers/ApartmentList';
-import SingleApartment from 'src/components/SingleApartment';
+import SingleApartment from 'src/containers/SingleApartment';
 import NewApartmentForm from 'src/containers/NewApartmentForm';
+import NewRoomForm from 'src/containers/NewRoomForm';
 
 const App = ({ getAllApartments, apartments, loading }) => {
   useEffect(() => {
@@ -27,6 +28,12 @@ const App = ({ getAllApartments, apartments, loading }) => {
       <Route exact path="/new-apartment">
         <Page>
           <NewApartmentForm />
+        </Page>
+      </Route>
+
+      <Route exact path="/new-room">
+        <Page>
+          <NewRoomForm />
         </Page>
       </Route>
 

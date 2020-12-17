@@ -1,0 +1,25 @@
+@use 'src/styles/vars' as v;
+
+.newRoomForm {
+  &-title {
+    padding-top: 0.5em;
+  }
+  &-input {
+    margin-top: 1em;
+    display: block;
+  }
+  &-button {
+    margin-top: 1em;
+    display: block;
+  }
+}
+
+.ui.input {
+  width: 400px;
+  height: 40px;
+}
+
+.ui.button {
+  width: 200px;
+  height: 40px;
+}

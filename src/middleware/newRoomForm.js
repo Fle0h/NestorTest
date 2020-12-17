@@ -1,31 +1,29 @@
 import axios from 'axios';
 import {
-  SUBMIT_NEW_APARTMENT,
-} from 'src/actions/newApartmentForm';
+  SUBMIT_NEW_ROOM,
+} from 'src/actions/newRoomForm';
 
 import {
   getAllApartments,
 } from 'src/actions/app';
 
-const newApartmentForm = (store) => (next) => (action) => {
+const newRoomForm = (store) => (next) => (action) => {
   switch (action.type) {
     // Sauvegarder un nouvel appartement
-    case SUBMIT_NEW_APARTMENT: {
+    case SUBMIT_NEW_ROOM: {
       const {
-        newApartmentForm: {
+        newRoomForm: {
           number,
-          name,
-          street,
-          zipcode,
-          rooms,
+          area,
+          price,
+          apartmentId,
         },
       } = store.getState();
-      axios.post('https://app-booking-christ.herokuapp.com/api/apartment', {
+      axios.post('https://app-booking-christ.herokuapp.com/api/room', {
         number,
-        name,
-        street,
-        zipcode,
-        rooms,
+        area,
+        price,
+        apartmentId,
       })
         .then((res) => {
           console.log(res);
@@ -41,4 +39,4 @@ const newApartmentForm = (store) => (next) => (action) => {
   }
 };
 
-export default newApartmentForm;
+export default newRoomForm;

@@ -5,6 +5,7 @@ import logMiddleware from '../middleware/logMiddleware';
 import app from '../middleware/app';
 import apartmentList from '../middleware/apartmentList';
 import newApartmentForm from '../middleware/newApartmentForm';
+import newRoomForm from '../middleware/newRoomForm';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -14,6 +15,7 @@ const enhancers = composeEnhancers(
     app,
     apartmentList,
     newApartmentForm,
+    newRoomForm,
   ),
 );
 

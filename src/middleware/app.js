@@ -5,7 +5,7 @@ import
   saveAllApartments,
 } from 'src/actions/app';
 
-const apartmentList = (store) => (next) => (action) => { 
+const apartmentList = (store) => (next) => (action) => {
   switch (action.type) {
     // Stocker tous les appartements dans le store
     case GET_ALL_APARTMENTS: {
