@@ -4,11 +4,11 @@ import { useHistory } from 'react-router-dom';
 
 import './style.scss';
 
-const NewRoomForm = ({ changeInputValue, submitNewRoom, formValues }) => {
+const NewRoomForm = ({ changeInputValueRoom, submitNewRoom, formValues }) => {
   const history = useHistory();
 
   const handleChangeInput = (event) => {
-    changeInputValue(event.target.name, event.target.value);
+    changeInputValueRoom(event.target.name, event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -29,7 +29,7 @@ const NewRoomForm = ({ changeInputValue, submitNewRoom, formValues }) => {
               id="number"
               type="number"
               required
-              placeholder="Numéro de l'appartement"
+              placeholder="Numéro de la chambre"
               onChange={handleChangeInput}
               value={formValues.number}
             />
@@ -78,7 +78,7 @@ const NewRoomForm = ({ changeInputValue, submitNewRoom, formValues }) => {
 };
 
 NewRoomForm.propTypes = {
-  changeInputValue: PropTypes.func.isRequired,
+  changeInputValueRoom: PropTypes.func.isRequired,
   submitNewRoom: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
 };

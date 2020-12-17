@@ -14,6 +14,7 @@ const Apartment = ({
   <div className="apartmentList__apartment">
     <Link to={`/apartment/${slugify(slug)}`}>
       <img className="apartmentList__apartment-image" src="https://en.jobs.game/images/template/no-logo.png" alt="Appartement" />
+      <div className="ui divider"> </div>
       <h2 className="apartmentList__apartment-title">{name}</h2>
       <h3 className="apartmentList__apartment-subtitle">{streetNumber} {streetName}</h3>
     </Link>

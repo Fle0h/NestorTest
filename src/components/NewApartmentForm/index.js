@@ -4,11 +4,12 @@ import { useHistory } from 'react-router-dom';
 
 import './style.scss';
 
-const NewApartmentForm = ({ changeInputValue, submitNewApartment, formValues }) => {
+const NewApartmentForm = ({ changeInputValueApartment, submitNewApartment, formValues }) => {
   const history = useHistory();
 
   const handleChangeInput = (event) => {
-    changeInputValue(event.target.name, event.target.value);
+    changeInputValueApartment(event.target.name, event.target.value);
+    console.log(event.target.name);
   };
 
   const handleSubmit = (event) => {
@@ -22,6 +23,7 @@ const NewApartmentForm = ({ changeInputValue, submitNewApartment, formValues }) 
       <h2 className="newApartmentForm-title">Créer un nouvel appartement</h2>
       <form autoComplete="off" onSubmit={handleSubmit}>
 
+        {/* Appartement */}
         <div className="newApartmentForm-input">
           <div className="ui input">
             <input
@@ -78,6 +80,52 @@ const NewApartmentForm = ({ changeInputValue, submitNewApartment, formValues }) 
           </div>
         </div>
 
+        <div className="ui divider"> </div>
+
+        {/* Chambre */}
+        <h2 className="newApartmentForm-subtitle">Créer une chambre</h2>
+        <div className="newApartmentForm-input">
+          <div className="ui input">
+            <input
+              name="roomNumber"
+              id="roomNumber"
+              type="number"
+              required
+              placeholder="Numéro de la chambre"
+              onChange={handleChangeInput}
+              value={formValues.roomNumber}
+            />
+          </div>
+        </div>
+
+        <div className="newApartmentForm-input">
+          <div className="ui input">
+            <input
+              name="roomArea"
+              id="roomArea"
+              type="number"
+              required
+              placeholder="Surface"
+              onChange={handleChangeInput}
+              value={formValues.roomArea}
+            />
+          </div>
+        </div>
+
+        <div className="newApartmentForm-input">
+          <div className="ui input">
+            <input
+              name="roomPrice"
+              id="roomPrice"
+              type="number"
+              required
+              placeholder="Prix"
+              onChange={handleChangeInput}
+              value={formValues.roomPrice}
+            />
+          </div>
+        </div>
+
         <div className="newApartmentForm-button">
           <button
             type="submit"
@@ -92,7 +140,7 @@ const NewApartmentForm = ({ changeInputValue, submitNewApartment, formValues }) 
 };
 
 NewApartmentForm.propTypes = {
-  changeInputValue: PropTypes.func.isRequired,
+  changeInputValueApartment: PropTypes.func.isRequired,
   submitNewApartment: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
 };

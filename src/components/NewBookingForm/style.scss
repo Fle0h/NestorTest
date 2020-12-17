@@ -1,6 +1,6 @@
 @use 'src/styles/vars' as v;
 
-.newApartmentForm {
+.newBookingForm {
   width: 700px;
   border: solid 1px rgba(105,105,105,0.7);
   margin: 0em auto;
@@ -11,12 +11,8 @@
   -moz-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
   &-title {
+    color: #3F6E77;
     padding-top: 0.5em;
-    color: #3F6E77;
-  }
-  &-subtitle {
-    padding-top: 0em;
-    color: #3F6E77;
   }
   &-input {
     margin-top: 1em;
@@ -36,4 +32,10 @@
 .ui.button {
   width: 200px;
   height: 40px;
+}
+
+.ui.search.dropdown {
+  width: 400px;
+  display: block;
+  margin: 1em auto;
 }

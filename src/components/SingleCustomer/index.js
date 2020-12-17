@@ -10,10 +10,11 @@ const SingleCustomer = ({ customers }) => {
   console.log(foundCustomer);
   return (
     <div className="singleCustomer">
-      <h2 className="singleCustomer-title">{foundCustomer.firstName} {foundCustomer.lastName}</h2>
-      <h3 className="singleCustomer-text">{foundCustomer.phone}</h3>
-      <h3 className="singleCustomer-text">{foundCustomer.birthDate}</h3>
-      <h3 className="singleCustomer-text">{foundCustomer.nationality}</h3>
+      <h2 className="singleCustomer-title">Fiche Client ID : {foundCustomer.id}</h2>
+      <h3 className="singleCustomer-text">Nom : {foundCustomer.firstName} {foundCustomer.lastName}</h3>
+      <h3 className="singleCustomer-text">Téléphone : {foundCustomer.phone}</h3>
+      <h3 className="singleCustomer-text">Date de naissance : {foundCustomer.birthDate}</h3>
+      <h3 className="singleCustomer-text">Nationalité : {foundCustomer.nationality}</h3>
     </div>
   );
 };

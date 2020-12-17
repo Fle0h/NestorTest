@@ -12,9 +12,17 @@
     border: 1px solid grey;
     border-radius: 2em;
     margin-top: 2em;
+    &-text {
+      margin-top: 0em;
+    }
   }
   &-button {
     text-align: right;
     margin-right: 2em;
   }
+}
+
+a.ui.button {
+  width: 300px;
+  height: 40px;
 }

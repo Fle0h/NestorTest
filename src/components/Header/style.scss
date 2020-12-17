@@ -1,7 +1,11 @@
 @use 'src/styles/vars' as v;
 
 .header {
-  background-color: red;
-  padding: 1em 0em;
+  background-color: #1C2B4A;
+  padding: 1.5em 0em;
   overflow: hidden;
+  &-title {
+    font-size: 2.5em;
+    color: white;
+  }
 }

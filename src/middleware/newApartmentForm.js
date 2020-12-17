@@ -17,15 +17,25 @@ const newApartmentForm = (store) => (next) => (action) => {
           name,
           street,
           zipcode,
-          rooms,
+          roomNumber,
+          roomArea,
+          roomPrice,
         },
       } = store.getState();
+
+      // Construction d'un tableau pour le post de la chambre
+      const roomArray = [{
+        number: roomNumber,
+        area: roomArea,
+        price: roomPrice,
+      }];
+
       axios.post('https://app-booking-christ.herokuapp.com/api/apartment', {
         number,
         name,
         street,
         zipcode,
-        rooms,
+        rooms: roomArray,
       })
         .then((res) => {
           console.log(res);

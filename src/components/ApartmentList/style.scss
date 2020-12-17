@@ -13,17 +13,23 @@
     justify-content: space-evenly;
     text-align: center;
     &__apartment {
+      background-color: white;
       width: 400px;
-      border: black 1px solid;
+      border: rgba(105,105,105,0.7) 1px solid;
       border-radius: 1em;
       margin-top: 2em;
       &-title {
         text-align: left;
-        margin-left: 1em;
+        margin-left: 2em;
+        color: #303030;
+        text-decoration: none;
       }
       &-subtitle {
+        margin-top: 0em;
         text-align: left;
-        margin-left: 2em;
+        margin-left: 2.5em;
+        color: #303030;
+        text-decoration: none;
       }
     }
   }

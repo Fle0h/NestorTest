@@ -1,16 +1,18 @@
-import { CHANGE_INPUT_VALUE } from 'src/actions/newApartmentForm';
+import { CHANGE_INPUT_VALUE_APARTMENT } from 'src/actions/newApartmentForm';
 
 export const initialState = {
   name: '',
   number: '',
   street: '',
   zipcode: '',
-  rooms: [],
+  roomNumber: '',
+  roomArea: '',
+  roomPrice: '',
 };
 
 const newApartmentForm = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_INPUT_VALUE:
+    case CHANGE_INPUT_VALUE_APARTMENT:
       return {
         ...state,
         [action.target]: action.value,

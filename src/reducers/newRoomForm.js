@@ -1,5 +1,5 @@
 import {
-  CHANGE_INPUT_VALUE,
+  CHANGE_INPUT_VALUE_ROOM,
   CHANGE_APARTMENT_ID,
 } from 'src/actions/newRoomForm';
 
@@ -12,7 +12,7 @@ export const initialState = {
 
 const newApartmentForm = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_INPUT_VALUE:
+    case CHANGE_INPUT_VALUE_ROOM:
       return {
         ...state,
         [action.target]: action.value,

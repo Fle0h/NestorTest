@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import NewApartmentForm from 'src/components/NewApartmentForm';
 
 import {
-  changeInputValue,
+  changeInputValueApartment,
   submitNewApartment,
 } from 'src/actions/newApartmentForm';
 
@@ -11,8 +11,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeInputValue: (target, value) => {
-    dispatch(changeInputValue(target, value));
+  changeInputValueApartment: (target, value) => {
+    dispatch(changeInputValueApartment(target, value));
   },
   submitNewApartment: () => {
     dispatch(submitNewApartment());

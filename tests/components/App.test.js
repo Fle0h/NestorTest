@@ -1,27 +1,18 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { expect } from 'chai';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import App from 'src/components/App';
+import { shallow } from 'enzyme';
+import { should } from 'chai';
+import App from "src/components/App";
 
-it('renders without crashing', () => {
-  const mockStore = configureStore();
-  const initialState = {
-    apartments: [],
-    customers: [],
-    loading: true,
-  };
+should();
 
-  const store = mockStore(initialState);
+describe('Composant Source -> App', () => {
+  const comp = shallow(<App />);
 
-  const wrapper = mount(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+  it('should be a function', () => {
+    App.should.be.a('function');
+  });
 
-  console.log(wrapper.debug());
-
-  expect(wrapper.find('.app')).to.have.lengthOf(1);
+  it('should have prop className', () => {
+    comp.props().should.have.property('className');
+  });
 });

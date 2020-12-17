@@ -18,7 +18,16 @@ const CustomerList = ({ customers }) => {
   });
 
   return (
-    <div className="customerList">{customersMap}</div>
+    <div className="customerList">
+      <div className="customerList-buttons">
+        <div className="customerList-button-new">
+          <Link className="ui button" to="/new-customer">
+            Créer un nouveau client
+          </Link>
+        </div>
+      </div>
+      <div className="customerList_customers">{customersMap}</div>
+    </div>
   );
 };
 

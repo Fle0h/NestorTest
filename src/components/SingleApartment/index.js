@@ -13,6 +13,7 @@ const SingleApartment = ({ changeApartmentID, apartment }) => {
     changeApartmentID(id);
   };
 
+  // Création des Chambres
   const roomsMap = apartment.rooms.map((singleRoom) => {
     return (
       <SingleRoom
@@ -26,8 +27,14 @@ const SingleApartment = ({ changeApartmentID, apartment }) => {
 
   return (
     <div className="singleApartment">
+      {/* Appartement */}
       <img className="singleApartment-image" src="https://en.jobs.game/images/template/no-logo.png" alt="Appartement" />
       <h1 className="singleApartment-title">{apartment.name}</h1>
+      <h2 className="singleApartment-title">{apartment.number} {apartment.street} {apartment.zipcode}</h2>
+
+      <div className="ui divider"> </div>
+
+      {/* Chambres */}
       <h2 className="singleApartment-subtitle">Chambres disponibles :</h2>
 
       <div className="apartmentList-button-new">

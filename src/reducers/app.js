@@ -1,12 +1,15 @@
 import {
   SAVE_ALL_APARTMENTS,
   SAVE_ALL_CUSTOMERS,
+  SAVE_ALL_BOOKINGS,
+  SAVE_ALL_ROOMS,
 } from 'src/actions/app';
 
 export const initialState = {
   apartments: [],
   customers: [],
-  loading: true,
+  bookings: [],
+  rooms: [],
 };
 
 const app = (state = initialState, action = {}) => {
@@ -15,13 +18,21 @@ const app = (state = initialState, action = {}) => {
       return {
         ...state,
         apartments: action.apartments,
-        loading: false,
       };
     case SAVE_ALL_CUSTOMERS:
       return {
         ...state,
         customers: action.customers,
-        loading: false,
+      };
+    case SAVE_ALL_BOOKINGS:
+      return {
+        ...state,
+        bookings: action.bookings,
+      };
+    case SAVE_ALL_ROOMS:
+      return {
+        ...state,
+        rooms: action.rooms,
       };
     default:
       return state;
