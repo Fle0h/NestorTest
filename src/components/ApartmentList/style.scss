@@ -1,0 +1,24 @@
+@use 'src/styles/vars' as v;
+
+.apartmentList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 2em;
+  &__apartment {
+    width: 400px;
+    border: black 1px solid;
+    border-radius: 1em;
+    margin-top: 2em;
+    &-title {
+      text-align: left;
+      margin-left: 1em;
+    }
+    &-subtitle {
+      text-align: left;
+      margin-left: 2em;
+    }
+  }
+}
