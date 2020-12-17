@@ -5,8 +5,9 @@ import
   saveAllApartments,
 } from 'src/actions/app';
 
-const app = (store) => (next) => (action) => {
+const apartmentList = (store) => (next) => (action) => { 
   switch (action.type) {
+    // Stocker tous les appartements dans le store
     case GET_ALL_APARTMENTS: {
       axios.get('https://app-booking-christ.herokuapp.com/api/apartment')
         .then((res) => {
@@ -22,4 +23,4 @@ const app = (store) => (next) => (action) => {
   }
 };
 
-export default app;
+export default apartmentList;

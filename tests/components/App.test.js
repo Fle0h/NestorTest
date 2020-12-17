@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { should } from 'chai';
 
-import App from 'src/components/App';
+import App from 'src/containers/App';
 
 should();
 

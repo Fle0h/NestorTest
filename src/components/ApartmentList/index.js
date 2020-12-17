@@ -1,18 +1,13 @@
 /* eslint-disable arrow-body-style */
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Apartment from './Apartment';
 
 import './style.scss';
 
-const ApartmentList = ({ getAllApartments, apartments }) => {
-  useEffect(() => {
-    getAllApartments();
-  }, []);
-
-  console.log(apartments);
-
+const ApartmentList = ({ apartments }) => {
   const apartmentsMap = apartments.map((singleApartment) => {
     return (
       <Apartment
@@ -26,12 +21,20 @@ const ApartmentList = ({ getAllApartments, apartments }) => {
   });
 
   return (
-    <div className="apartmentList">{apartmentsMap}</div>
+    <div className="apartments">
+      <div className="apartmentList-buttons">
+        <div className="apartmentList-button-new">
+          <Link className="ui button" to="/new-apartment">
+            Créer un nouvel appartement
+          </Link>
+        </div>
+      </div>
+      <div className="apartmentList">{apartmentsMap}</div>
+    </div>
   );
 };
 
 ApartmentList.propTypes = {
-  getAllApartments: PropTypes.func.isRequired,
   apartments: PropTypes.array.isRequired,
 };
 
