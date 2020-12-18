@@ -8,11 +8,13 @@
     margin-right: 2em;
   }
   &_cell {
+    padding: 0.3em, 0em;
     margin: 1em 2em;
     border: 1px solid rgba(105,105,105,0.7);
     border-radius: 0.2em;
     background-color: white;
     &-fullName {
+      font-size: 2em;
       margin-left: 2em;
       color: #303030;
       text-decoration: none;
