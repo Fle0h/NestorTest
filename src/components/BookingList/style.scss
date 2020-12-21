@@ -13,6 +13,8 @@
     border: 1px solid rgba(105,105,105,0.7);
     border-radius: 0.2em;
     &-fullName {
+      padding-top: 1em;
+      font-size: 1.5em;
       margin-left: 2em;
       color: #303030;
       text-decoration: none;
@@ -20,7 +22,7 @@
     &-infos {
       font-size: 1.5em;
       color: #404040;
-      margin-top: 0rem;
+      padding: 1em 0em;
       margin-left: 2.3em;
     }
   }

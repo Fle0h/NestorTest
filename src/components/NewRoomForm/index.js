@@ -19,7 +19,7 @@ const NewRoomForm = ({ changeInputValueRoom, submitNewRoom, formValues }) => {
 
   return (
     <div className="newRoomForm">
-      <h2 className="newRoomForm-title">Créer un nouvel appartement</h2>
+      <h2 className="newRoomForm-title">Créer une nouvelle chambre</h2>
       <form autoComplete="off" onSubmit={handleSubmit}>
 
         <div className="newRoomForm-input">
