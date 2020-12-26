@@ -1,6 +1,14 @@
 @use 'src/styles/vars' as v;
 
 .singleApartment {
+  &-title {
+    font-size: 1.5em;
+    margin: 1em 0em;
+  }
+  &-subtitle {
+    font-size: 1.5em;
+    margin: 1em 0em;
+  }
   &_rooms {
     display: flex;
     flex-direction: row;
@@ -13,7 +21,7 @@
     border-radius: 2em;
     margin-top: 2em;
     &-text {
-      font-size: 1em;
+      font-size: 1.5em;
       margin: 1em 0em;
     }
   }

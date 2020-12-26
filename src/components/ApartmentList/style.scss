@@ -19,17 +19,19 @@
       border-radius: 1em;
       margin-top: 2em;
       &-title {
+        text-decoration: none;
+        font-size: 1.5em;
         text-align: left;
         margin-left: 2em;
         color: #303030;
-        text-decoration: none;
       }
       &-subtitle {
+        text-decoration: none;
+        font-size: 1.5em;
         margin-top: 0em;
         text-align: left;
         margin-left: 2.5em;
         color: #303030;
-        text-decoration: none;
       }
     }
   }
